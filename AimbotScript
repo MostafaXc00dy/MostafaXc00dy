@@ -24,7 +24,7 @@ Title.Parent = Aimbot
 Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Title.Size = UDim2.new(0, 126, 0, 50)
 Title.Font = Enum.Font.SourceSans
-Title.Text = "Aimbot Tutorial"
+Title.Text = "Aimbot"
 Title.TextColor3 = Color3.fromRGB(0, 0, 0)
 Title.TextSize = 20.000
 
