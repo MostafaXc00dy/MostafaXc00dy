@@ -1,0 +1,19 @@
+local mt = getrawmetatable(game)
+make_writeable(mt)
+
+local namecall = mt.__namecall
+
+mt.__namecall = newcclosure(function(self, ...)
+    local method = getnamecallmethod()
+    local args = {...}
+
+    if method == "FireServer" and tostring(self) == "AdminComRHP" then -- Anti Cheat
+        -- Current Anti Cheat Args.
+        if args[1] == "SSS" or args[1] == "PS" or args[1] == "S" or args[1] == "PF" or args[1] == "HP" or args[1] == "HRPS" then
+            return;
+        else
+            return namecall(self, table.unpack(args));
+        end
+    end
+    return namecall(self, table.unpack(args))
+end)
