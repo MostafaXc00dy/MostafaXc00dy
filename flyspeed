@@ -8,7 +8,7 @@ local flying = false
 local deb = true 
 local ctrl = {f = 0, b = 0, l = 0, r = 0} 
 local lastctrl = {f = 0, b = 0, l = 0, r = 0} 
-local maxspeed = 80 
+local maxspeed = 90
 local speed = 0 
 
 function Fly() 
