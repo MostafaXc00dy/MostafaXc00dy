@@ -1,6 +1,6 @@
 local DiscordLib = loadstring(game:HttpGet"https://raw.githubusercontent.com/dawid-scripts/UI-Libs/main/discord%20lib.txt")()
 
-local win = DiscordLib:Window("Discord")
+local win = DiscordLib:Window("Outlaws Hack")
 
 local serv = win:Server("Outlaws", "")
 
@@ -948,12 +948,6 @@ setclipboard("https://discord.gg/YFe8auj6")
 toclipboard("https://discord.gg/YFe8auj6")
 end)
 
-btns:Button("Nexus Exploits", function()
-    DiscordLib:Notification("Notification", "MX SERVER LINK HAVE BEEN COPYED", "Okay")
-    setclipboard("https://discord.gg/7Ra38hwf")
-    toclipboard("https://discord.gg/7Ra38hwf")
-    end)
-
 btns:Button("MX-Community", function()
     DiscordLib:Notification("Notification", "MX SERVER LINK HAVE BEEN COPYED", "Okay")
     setclipboard("https://discord.gg/aDKvhQKf")
@@ -970,8 +964,7 @@ lbls:Label("--Thx For Amir")
 
 lbls:Label("--AND Thank You For Using My Script")
 
+game.StarterGui:SetCore( "ChatMakeSystemMessage",  { Text = "[Server] Outlaws cheat have been activation", Color = Color3.fromRGB( 255,0,0 ), Font = Enum.Font.Arial, FontSize = Enum.FontSize.Size24 } )
 
-local ohString1 = "Outlaw is Here"
-local ohString2 = "All"
 
 game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(ohString1, ohString2)
