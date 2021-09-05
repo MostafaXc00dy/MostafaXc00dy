@@ -161,8 +161,9 @@ function DiscordLib:Window(text)
 	CloseBtn.TextSize = 14.000
 	CloseBtn.BorderSizePixel = 0
 	CloseBtn.AutoButtonColor = false
-    game.StarterGui:SetCore( "ChatMakeSystemMessage",  { Text = "[Server] Outlaws cheat have been activation", Color = Color3.fromRGB( 255,0,0 ), Font = Enum.Font.Arial, FontSize = Enum.FontSize.Size24 } )
-
+        CloseBtn.MouseButton1Down:connect(function()
+        game.StarterGui:SetCore( "ChatMakeSystemMessage",  { Text = "[Server] Outlaws cheat have been activation", Color = Color3.fromRGB( 255,0,0 ), Font = Enum.Font.Arial, FontSize = Enum.FontSize.Size24 } )
+        end)
 	CloseIcon.Name = "CloseIcon"
 	CloseIcon.Parent = CloseBtn
 	CloseIcon.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
