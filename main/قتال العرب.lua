@@ -24,7 +24,7 @@ _G.Sensitivity = 0
 _G.CircleSides = 64 
 _G.CircleColor = Color3.fromRGB(255, 255, 255)
 _G.CircleTransparency = 0.7 
-_G.CircleRadius = 80 
+_G.CircleRadius = 0 
 _G.CircleFilled = false
 _G.CircleVisible = true
 _G.CircleThickness = 0 
@@ -108,6 +108,11 @@ RunService.RenderStepped:Connect(function()
         TweenService:Create(Camera, TweenInfo.new(_G.Sensitivity, Enum.EasingStyle.Sine, Enum.EasingDirection.Out), {CFrame = CFrame.new(Camera.CFrame.Position, GetClosestPlayer().Character[_G.AimPart].Position)}):Play()
     end
 end)
+end)
+
+btns:Slider("Aimbot Fov", 0, 500, 0, function(t)
+    _G.CircleRadius = (t) 
+print(t)
 end)
 
 btns:Button("Silent aim", function()
@@ -211,7 +216,7 @@ local flying = false
 local deb = true 
 local ctrl = {f = 0, b = 0, l = 0, r = 0} 
 local lastctrl = {f = 0, b = 0, l = 0, r = 0} 
-local maxspeed = 90
+local maxspeed = 120
 local speed = 0 
 
 function Fly() 
@@ -804,7 +809,7 @@ end)
 
 btns:Button("RemoveCameraZoom", function()
     getgenv().CameraMaxZoomDistance = 12000
-    
+  
 
     local RunService = game:GetService("RunService")
     
@@ -943,18 +948,18 @@ local serv = win:Server("Credit", "")
 local btns = serv:Channel("Discord Servers")
 
 btns:Button("My Discord Server", function()
-DiscordLib:Notification("Notification", "OWTLUAS SERVER LINK HAVE BEEN COPYED", "Okay")
+DiscordLib:Notification("Notification", "OWTLUAS SERVER LINK HAVE BEEN COPYED TO YOUR CLIPBOARD", "Okay")
 setclipboard("https://discord.gg/YFe8auj6")
 toclipboard("https://discord.gg/YFe8auj6")
 end)
 
-btns:Button("MX-Community", function()
-    DiscordLib:Notification("Notification", "MX SERVER LINK HAVE BEEN COPYED", "Okay")
-    setclipboard("https://discord.gg/aDKvhQKf")
-    toclipboard("https://discord.gg/aDKvhQKf")
+btns:Button("Nexus Exploits", function()
+    DiscordLib:Notification("Notification", "Nexus Explits SERVER LINK HAVE BEEN COPYED TO YOUR CLIPBOARD COPYED", "Okay")
+    setclipboard("https://discord.gg/7Ra38hwf")
+    toclipboard("https://discord.gg/7Ra38hwf")
     end)
-
-local lbls = serv:Channel("By Mostafa#2804")
+	
+local lbls = serv:Channel("By Mostafa#2308")
 
 lbls:Label("--Outlaws Server")
 
@@ -964,7 +969,7 @@ lbls:Label("--Thx For Amir")
 
 lbls:Label("--AND Thank You For Using My Script")
 
-game.StarterGui:SetCore( "ChatMakeSystemMessage",  { Text = "[Server] Outlaws cheat have been activation", Color = Color3.fromRGB( 255,0,0 ), Font = Enum.Font.Arial, FontSize = Enum.FontSize.Size24 } )
+game.StarterGui:SetCore( "ChatMakeSystemMessage",  { Text = "[Server]Outlaws cheat have been activation", Color = Color3.fromRGB( 255,0,0 ), Font = Enum.Font.Arial, FontSize = Enum.FontSize.Size24 } )
 
 
 game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(ohString1, ohString2)
