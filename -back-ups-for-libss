@@ -61,7 +61,7 @@ function Library:Tab(name)
 	Tab.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
 	Tab.BorderSizePixel = 0
 	Tab.Position = UDim2.new(0, TabXPosition, 0, 30)
-	Tab.Size = UDim2.new(0, 125, 0, 25)
+	Tab.Size = UDim2.new(0, 120, 0, 20)
 	Tab.Font = Enum.Font.SciFi
 	Tab.Text = name
 	Tab.TextColor3 = Color3.new(1, 1, 1)
