@@ -1,6 +1,6 @@
 local Library = {}
 local UILib = Instance.new("ScreenGui")
-local TabXPosition = 50
+local TabXPosition = 80
 
 UILib.Name = "UILib"
 UILib.Parent = game:GetService("CoreGui")
