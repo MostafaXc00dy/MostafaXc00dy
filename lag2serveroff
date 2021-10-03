@@ -1,9 +1,0 @@
-while true not do 
-
-local args = {
-    [1] = "Common Case",
-}
-
-game:GetService("ReplicatedStorage").Remotes.AttemptCrateBuy:InvokeServer(unpack(args))
-
-end
