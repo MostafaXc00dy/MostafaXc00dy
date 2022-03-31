@@ -1,0 +1,5 @@
+- 👋 Hi, I’m @MostafaXc00dy
+- 👀 I’m interested in Roblox Scripts
+- 🌱 I’m currently learning Lua
+- 💞️ I’m looking to help others
+- 📫 How to reach me c00dy#0001
