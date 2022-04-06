@@ -213,15 +213,6 @@ ScreenGui.DescendantRemoving:Connect(function(Instance)
 end);
 
 function Library:UpdateColorsUsingRegistry()
-    -- TODO: Could have an 'active' list of objects
-    -- where the active list only contains Visible objects.
-
-    -- IMPL: Could setup .Changed events on the AddToRegistry function
-    -- that listens for the 'Visible' propert being changed.
-    -- Visible: true => Add to active list, and call UpdateColors function
-    -- Visible: false => Remove from active list.
-
-    -- The above would be especially efficient for a rainbow menu color or live color-changing.
 
     for Idx, Object in next, Library.Registry do
         for Property, ColorIdx in next, Object.Properties do
@@ -580,7 +571,7 @@ do
         local KeyPicker = {
             Value = Info.Default;
             Toggled = false;
-            Mode = Info.Mode or 'Toggle'; -- Always, Toggle, Hold
+            Mode = Info.Mode or 'Toggle';
             Type = 'KeyPicker';
         };
 
@@ -1560,7 +1551,6 @@ do
 
             for _, Element in next, Scrolling:GetChildren() do
                 if not Element:IsA('UIListLayout') then
-                    -- Library:RemoveFromRegistry(Element);
                     Element:Destroy();
                 end;
             end;
@@ -1670,7 +1660,6 @@ do
             ListOuter.Size = UDim2.new(1, -8, 0, Y);
             Scrolling.CanvasSize = UDim2.new(0, 0, 0, Count * 20);
 
-            -- ListOuter.Size = UDim2.new(1, -8, 0, (#Values * 20) + 2);
         end;
 
         function Dropdown:OpenDropdown()
@@ -1767,7 +1756,6 @@ do
     end;
 end;
 
--- < Create other UI elements >
 do
     Library.NotificationArea = Library:Create('Frame', {
         BackgroundTransparency = 1;
@@ -2487,7 +2475,6 @@ function Library:CreateWindow(WindowTitle, pos)
             end;
         end);
 
-        -- This was the first tab added, so we show it by default.
         if #TabContainer:GetChildren() == 1 then
             Tab:ShowTab();
         end;
