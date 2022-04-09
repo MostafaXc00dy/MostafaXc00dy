@@ -27,7 +27,7 @@ local Library = {
     FontColor = Color3.fromRGB(255, 255, 255);
     MainColor = Color3.fromRGB(28, 28, 28);
     BackgroundColor = Color3.fromRGB(20, 20, 20);
-    AccentColor = Color3.fromRGB(220, 19, 1);
+    AccentColor = Color3.fromRGB(0, 85, 255);
     OutlineColor = Color3.fromRGB(50, 50, 50);
 
     Black = Color3.new(0, 0, 0);
@@ -78,7 +78,7 @@ end;
 function Library:CreateLabel(Properties, IsHud)
     local _Instance = Library:Create('TextLabel', {
         BackgroundTransparency = 1;
-        Font = Enum.Font.SourceSans;
+        Font = Enum.Font.Code;
         TextColor3 = Library.FontColor;
         TextSize = 16;
         TextStrokeTransparency = 0;
@@ -354,8 +354,8 @@ do
             Parent = HueSelectorOuter;
         });
 
-        local HueTextSize = Library:GetTextBounds('Hex color', Enum.Font.SourceSans, 16) + 3
-        local RgbTextSize = Library:GetTextBounds('255, 255, 255', Enum.Font.SourceSans, 16) + 3
+        local HueTextSize = Library:GetTextBounds('Hex color', Enum.Font.Code, 16) + 3
+        local RgbTextSize = Library:GetTextBounds('255, 255, 255', Enum.Font.Code, 16) + 3
 
         local HueBoxOuter = Library:Create('Frame', {
             BorderColor3 = Color3.new(0, 0, 0);
@@ -392,7 +392,7 @@ do
             BackgroundTransparency = 1;
             Position = UDim2.new(0, 5, 0, 0);
             Size = UDim2.new(1, -5, 1, 0);
-            Font = Enum.Font.SourceSans;
+            Font = Enum.Font.Code;
             PlaceholderColor3 = Color3.fromRGB(190, 190, 190);
             PlaceholderText = 'Hex color',
             Text = '#FFFFFF',
@@ -1043,7 +1043,7 @@ do
             BackgroundTransparency = 1;
             Position = UDim2.new(0, 5, 0, 0);
             Size = UDim2.new(1, -5, 1, 0);
-            Font = Enum.Font.SourceSans;
+            Font = Enum.Font.Code;
             PlaceholderColor3 = Color3.fromRGB(190, 190, 190);
             PlaceholderText = Info.Placeholder or '';
             Text = Info.Default or '';
@@ -1908,7 +1908,7 @@ function Library:SetWatermarkVisibility(Bool)
 end;
 
 function Library:SetWatermark(Text)
-    local Size = Library:GetTextBounds(Text, Enum.Font.SourceSans, 14);
+    local Size = Library:GetTextBounds(Text, Enum.Font.Code, 14);
     Library.Watermark.Size = UDim2.new(0, Size + 8 + 2, 0, 20);
     Library:SetWatermarkVisibility(true)
 
@@ -1916,7 +1916,7 @@ function Library:SetWatermark(Text)
 end;
 
 function Library:Notify(Text, Time)
-    local MaxSize = Library:GetTextBounds(Text, Enum.Font.SourceSans, 14);
+    local MaxSize = Library:GetTextBounds(Text, Enum.Font.Code, 14);
 
     local NotifyOuter = Library:Create('Frame', {
         BorderColor3 = Color3.new(0, 0, 0);
@@ -1995,7 +1995,7 @@ function Library:Notify(Text, Time)
     end);
 end;
 
-function Library:CreateWindow(WindowTitle, pos)
+function Library:CreateWindow(WindowTitle)
     local Window = {
         Tabs = {};
     };
@@ -2003,7 +2003,7 @@ function Library:CreateWindow(WindowTitle, pos)
     local Outer = Library:Create('Frame', {
         BackgroundColor3 = Color3.new(0, 0, 0);
         BorderSizePixel = 0;
-        Position = pos;
+        Position = UDim2.new(0, 175, 0, 50);
         Size = UDim2.new(0, 550, 0, 600);
         Visible = false;
         ZIndex = 1;
@@ -2103,7 +2103,7 @@ function Library:CreateWindow(WindowTitle, pos)
             Tabboxes = {};
         };
 
-        local TabButtonWidth = Library:GetTextBounds(Name, Enum.Font.SourceSans, 16);
+        local TabButtonWidth = Library:GetTextBounds(Name, Enum.Font.Code, 16);
 
         local TabButton = Library:Create('Frame', {
             BackgroundColor3 = Library.BackgroundColor;
@@ -2506,7 +2506,7 @@ function Library:CreateWindow(WindowTitle, pos)
     });
 
     InputService.InputBegan:Connect(function(Input, Processed)
-        if Input.KeyCode == Enum.KeyCode.RightShift or (Input.KeyCode == Enum.KeyCode.RightAlt and (not Processed)) then
+        if Input.KeyCode == Enum.KeyCode.RightControl or (Input.KeyCode == Enum.KeyCode.RightShift and (not Processed)) then
             Outer.Visible = not Outer.Visible;
             ModalElement.Modal = Outer.Visible;
 
