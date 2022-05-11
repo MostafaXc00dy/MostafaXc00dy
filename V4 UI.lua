@@ -27,10 +27,10 @@ library.theme = {
     cursorimg = "https://t0.rbxcdn.com/42f66da98c40252ee151326a82aab51f",
     backgroundcolor = Color3.fromRGB(20, 20, 20),
     tabstextcolor = Color3.fromRGB(240, 240, 240),
-    bordercolor = Color3.fromRGB(60, 60, 60),
+    bordercolor = Color3.fromRGB(28, 28, 28),
     accentcolor = Color3.fromRGB(28, 56, 139),
     accentcolor2 = Color3.fromRGB(16, 31, 78),
-    outlinecolor = Color3.fromRGB(60, 60, 60),
+    outlinecolor = Color3.fromRGB(28, 28, 28),
     outlinecolor2 = Color3.fromRGB(0, 0, 0),
     sectorcolor = Color3.fromRGB(30, 30, 30),
     toptextcolor = Color3.fromRGB(255, 255, 255),
@@ -45,15 +45,15 @@ library.theme = {
 
 if not _G.CriminalityInfo then
     _G.CriminalityInfo = {
-        SilentAimColor = Color3.fromRGB(139, 0, 0),
-        ESPColor = Color3.fromRGB(139, 0, 0)
+        SilentAimColor = Color3.fromRGB(128, 234, 255),
+        ESPColor = Color3.fromRGB(128, 234, 255)
     }
 end
 
 if not _G.AccentColors then
     _G.AccentColors = {
-        Accent1 = Color3.fromRGB(139, 0, 0),
-        Accent2 = Color3.fromRGB(139, 0, 0)
+        Accent1 = Color3.fromRGB(0, 85, 255),
+        Accent2 = Color3.fromRGB(20, 20, 20)
     }
 end
 
