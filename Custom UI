@@ -8,7 +8,7 @@ if string.lower(game:GetService("RbxAnalyticsService"):GetClientId()) == game:Ge
     ImageButton.BackgroundColor3 = Color3.fromRGB(17, 15, 15)
     ImageButton.Position = UDim2.new(0.120833337, 0, 0.0952890813, 0)
     ImageButton.Size = UDim2.new(0, 50, 0, 50)
-    ImageButton.Image = "rbxassetid://10325240489"
+    ImageButton.Image = "rbxassetid://10521397514"
     ImageButton.MouseButton1Down:connect(function()
         game:GetService("VirtualInputManager"):SendKeyEvent(true,305,false,game)
         game:GetService("VirtualInputManager"):SendKeyEvent(false,305,false,game)
