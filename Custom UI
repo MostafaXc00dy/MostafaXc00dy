@@ -124,7 +124,7 @@ local NameHub = Instance.new("TextLabel")
 	NameHub.Position = UDim2.new(0.0609756112, 75, 0, 20)
 	NameHub.Size = UDim2.new(0, 61, 0, 27)
 	NameHub.Font = Enum.Font.GothamSemibold
-	NameHub.Text = "  Crimson Hub"
+	NameHub.Text = "  "OutlawsHub"
 	NameHub.TextColor3 = Color3.fromRGB(255, 255, 255)
 	NameHub.TextSize = 40.000
 
